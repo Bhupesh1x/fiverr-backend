@@ -27,12 +27,7 @@ connectToMongo();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "https://fiverr-backend-nitm.onrender.com",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use("/api/users", userRoutes);
 app.use("/api/gigs", gigRoutes);
