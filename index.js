@@ -44,6 +44,8 @@ app.use((err, req, res, next) => {
   return res.status(errorStatus).send(errorMessage);
 });
 
-app.listen(8800, () => {
+const PORT = process.env.PORT || 8800;
+
+app.listen(PORT, () => {
   console.log("Server is running !");
 });
