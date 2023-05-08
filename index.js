@@ -27,7 +27,7 @@ connectToMongo();
 
 app.use(express.json());
 app.use(cookieParser());
-const whitelist = ["https://fiverr-backend-nitm.onrender.com"];
+const whitelist = ["http://localhost:3000"];
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || whitelist.indexOf(origin) !== -1) {
