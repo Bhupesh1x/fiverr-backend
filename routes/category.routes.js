@@ -8,7 +8,7 @@ import {
 
 const router = express.Router();
 
-router.get("/", verifyToken, getCategories);
+router.get("/", getCategories);
 router.post("/", verifyToken, createCategories);
 router.delete("/:id", verifyToken, deleteCategories);
 
