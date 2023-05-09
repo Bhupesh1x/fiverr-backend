@@ -42,7 +42,7 @@ export const login = async (req, res, next) => {
     const { password, ...result } = user?._doc;
 
     res
-      .cookie("accessToken", token, { httpOnly: true })
+      .cookie("accessToken", token, { sameSite: "none", httpOnly: true })
       .status(200)
       .send(result);
   } catch (error) {
